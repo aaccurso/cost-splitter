@@ -1,0 +1,16 @@
+<ion-pane>
+  <ion-header-bar class="bar-stable">
+    <div class="buttons">
+      <button class="button button-icon icon ion-ios-minus-outline" ng-click="shouldShowDelete = !shouldShowDelete"></button>
+      <h1 class="title">Cost Splitter</h1>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <ion-list show-delete="true">
+      <ion-item ng-repeat="cost in costs" item="item">
+        {{ cost.description }} <span class="badge badge-positive">{{ cost.value }}</span>
+      </ion-item>
+    </ion-list>
+    <button ui-sref="newCost">Add Cost</button>
+  </ion-content>
+</ion-pane>
